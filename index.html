@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>THUM RAI DEE — กำลังโหลด</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #f5e1c0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            margin: 0;
+        }
+
+        .splash-screen {
+            animation: fadeIn 1.5s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .app-name {
+            font-size: 2.5rem;
+            color: #4e342e;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .loading-bar {
+            width: 80%; /* ปรับให้ยืดหยุ่น */
+            max-width: 400px; /* ขีดจำกัดความกว้าง */
+            height: 8px;
+            background-color: #d1b490;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .loading-bar-fill {
+            height: 100%;
+            width: 0;
+            background-color: #6d4c41;
+            animation: fillBar 3s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fillBar {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* เพิ่มการปรับขนาดข้อความบนมือถือ */
+        @media (max-width: 600px) {
+            .app-name {
+                font-size: 2rem;
+            }
+
+            .loading-bar {
+                width: 90%; /* ขยายแถบโหลดในมือถือ */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-screen">
+        <div class="app-name">THUM RAI DEE</div>
+        <div class="loading-bar">
+            <div class="loading-bar-fill"></div>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            window.location.href = "main.html"; // เปลี่ยนหน้าไป main.html หลังจาก 3 วินาที
+        }, 3000);
+    </script>
+</body>
+</html>
