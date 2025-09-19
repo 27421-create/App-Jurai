@@ -309,7 +309,7 @@
         <div class="wheel" id="wheel">
             <!-- Segments will be populated by JavaScript -->
         </div>
-        <div class="wheel-center"></div>
+        <div class="wheel-center">🎲</div>
     </div>
 
     <button class="spin-btn" id="spinBtn" onclick="spinWheel()">หมุนวงล้อสุ่ม!</button>
@@ -379,7 +379,7 @@
             const wheel = document.getElementById('wheel');
             
             spinBtn.disabled = true;
-            spinBtn.textContent = '🌀 กำลังสุ่ม...';
+            spinBtn.textContent = 'กำลังสุ่ม...';
             
             // สุ่มจำนวนรอบและตำแหน่งสุดท้าย
             const spins = 5 + Math.random() * 5; // 5-10 รอบ

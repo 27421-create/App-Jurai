@@ -312,11 +312,11 @@
         <div class="wheel-center">🎨</div>
     </div>
 
-    <button class="spin-btn" id="spinBtn" onclick="spinWheel()">🎲 หมุนวงล้อสุ่ม!</button>
+    <button class="spin-btn" id="spinBtn" onclick="spinWheel()">หมุนวงล้อสุ่ม!</button>
 
     <div class="result-overlay" id="resultOverlay">
         <div class="result-content">
-            <div class="result-title">🎉 กิจกรรมที่คุณควรทำคือ</div>
+            <div class="result-title">กิจกรรมที่คุณควรทำคือ</div>
             <div class="result-activity" id="resultActivity"></div>
             <img class="result-image" id="resultImage" src="" alt="กิจกรรมที่ได้">
             <br>
@@ -378,7 +378,7 @@
             const wheel = document.getElementById('wheel');
             
             spinBtn.disabled = true;
-            spinBtn.textContent = '🌀 กำลังสุ่ม...';
+            spinBtn.textContent = 'กำลังสุ่ม...';
             
             const spins = 5 + Math.random() * 5;
             const finalAngle = Math.random() * 360;
@@ -398,7 +398,7 @@
                 
                 isSpinning = false;
                 spinBtn.disabled = false;
-                spinBtn.textContent = '🎲 หมุนอีกครั้ง!';
+                spinBtn.textContent = 'หมุนอีกครั้ง!';
             }, 4000);
         }
 
